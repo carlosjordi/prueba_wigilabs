@@ -1,4 +1,4 @@
-package com.carlosjordi.pruebawigilabs.ui.theme
+package com.carlosjordi.pruebawigilabs.feature_movie.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
