@@ -9,7 +9,7 @@ import com.carlosjordi.pruebawigilabs.feature_movie.domain.model.Movie
 @Dao
 interface MovieDao {
 
-    @Query("SELECT * FROM movie")
+    @Query("SELECT * FROM movie ORDER BY voteAverage DESC")
     suspend fun getMovies(): List<Movie>
 
     @Query("SELECT * FROM movie WHERE id = :id")
