@@ -5,8 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import com.carlosjordi.pruebawigilabs.feature_movie.presentation.popular_movies_list.MovieListScreen
+import androidx.navigation.compose.rememberNavController
 import com.carlosjordi.pruebawigilabs.feature_movie.presentation.ui.theme.PruebaWigiLabsTheme
+import com.carlosjordi.pruebawigilabs.navigation.MovieNavigation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,9 +16,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PruebaWigiLabsTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    MovieListScreen()
+                    val navController = rememberNavController()
+                    MovieNavigation(navHostController = navController)
                 }
             }
         }
