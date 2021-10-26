@@ -22,6 +22,8 @@ fun Movie.imagePath() = Constants.MOVIE_IMAGE_PATH + imageUrl
 
 fun Movie.shortDescription() = overview.take(80) + "..."
 
+fun Movie.votePercentage() = (voteAverage / 10).toFloat()
+
 fun List<Result>.toMovieList(): List<Movie> =
     map {
         it.toMovie()

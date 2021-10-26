@@ -2,4 +2,5 @@
     <string name="app_name">Prueba WigiLabs</string>
     <string name="movie_rated">Rated by %1$s people</string>
     <string name="movie_popularity">Popularity: %1$s</string>
+    <string name="movie_released_date">Released in %1$s</string>
 </resources>

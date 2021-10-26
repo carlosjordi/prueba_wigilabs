@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
@@ -42,9 +43,13 @@ fun MovieTitle(title: String) {
 }
 
 @Composable
-fun MovieDescription(description: String) {
+fun MovieDescription(
+    description: String,
+    isShortDescription: Boolean = true
+) {
     Text(
         text = description,
-        modifier = Modifier.padding(horizontal = 8.dp)
+        modifier = Modifier.padding(horizontal = 8.dp),
+        fontSize = if (isShortDescription) TextUnit.Unspecified else 18.sp
     )
 }
