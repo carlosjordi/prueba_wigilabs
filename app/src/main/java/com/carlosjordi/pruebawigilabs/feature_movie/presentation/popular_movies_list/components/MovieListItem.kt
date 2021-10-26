@@ -25,6 +25,7 @@ fun MovieListItem(
             .clickable { onClick() }
     ) {
         Column {
+            Spacer(modifier = Modifier.height(4.dp))
             MoviePoster(moviePoster = movie.imagePath())
             Spacer(modifier = Modifier.height(8.dp))
             MovieTitle(title = movie.title)
